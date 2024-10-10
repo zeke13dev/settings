@@ -36,6 +36,8 @@ require('rust-tools').setup({
   tools = {
       inlay_hints = {
             auto = false,  -- Disable automatic inlay hints
+            show_parameter_hints = false,  -- Disable parameter hints
+            show_variable_name = false,    -- Disable variable name hints
         },
   },
   server = {
@@ -102,8 +104,8 @@ vim.api.nvim_set_keymap('n', 'L', '<C-w>l', { noremap = true, silent = true })
 
 -- Use HJKL for resize
 vim.api.nvim_set_keymap('n', '<C-H>', ':vertical resize -2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-J>', ':resize +2<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-K>', ':resize -2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-J>', ':resize -2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-K>', ':resize +2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-L>', ':vertical resize +2<CR>', { noremap = true, silent = true })
 
 -- Remap Esc to go to normal mode in terminal
